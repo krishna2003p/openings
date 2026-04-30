@@ -25,8 +25,8 @@ const ContactArea = () => {
                     </div>
                     <h5 className="title">Our Address</h5>
                     <p>
-                      Awal Center, Kamal Ataturk Avenue,34, 19th floor <br />
-                      Banani, Dhaka, Bangladesh
+                      Prakash Nagar, Nunihai, Rambagh Agra (06) <br />
+                      Uttar Pradesh, India
                     </p>
                   </div>
                 </div>
@@ -38,8 +38,8 @@ const ContactArea = () => {
                     <h5 className="title">Contact Info</h5>
                     <p>
                       Open a chat or give us call at <br />
-                      <a href="tel:310.841.5500" className="call">
-                        310.841.5500
+                      <a href="tel:8791792328" className="call">
+                        +91 8791792328
                       </a>
                     </p>
                   </div>
@@ -53,10 +53,10 @@ const ContactArea = () => {
                     <p>
                       live chat service <br />
                       <Link
-                        href="https://openings-jobportal.vercel.app"
+                        href="https://openings-drab.vercel.app"
                         className="webaddress"
                       >
-                        https://openings-jobportal.vercel.app
+                        https://openings-drab.vercel.app
                       </Link>
                     </p>
                   </div>
