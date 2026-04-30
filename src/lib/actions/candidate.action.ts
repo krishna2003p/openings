@@ -596,11 +596,11 @@ export const getAppliedJobs = async (params: IGetAppliedJobsParams) => {
 
 export const applyForJob = async (params: {
   clerkId: string | null | undefined;
-  jobId: string;
+  openingsd: string;
 }) => {
   try {
     await connectToDatabase();
-    const { clerkId, jobId } = params;
+    const { clerkId, openingsd } = params;
 
     // Find the user by clerkId
     const user = await User.findOne({ clerkId });
@@ -614,8 +614,8 @@ export const applyForJob = async (params: {
       };
     }
 
-    // Find the job by jobId
-    const job = await Job.findById(jobId);
+    // Find the job by openingsd
+    const job = await Job.findById(openingsd);
     if (!job) {
       return {
         status: 'error',
@@ -624,7 +624,7 @@ export const applyForJob = async (params: {
     }
 
     // Check if the user has already applied for the job
-    if ((user?.appliedJobs || []).includes(jobId)) {
+    if ((user?.appliedJobs || []).includes(openingsd)) {
       return {
         status: 'error',
         message: 'User has already applied for this job'
@@ -635,7 +635,7 @@ export const applyForJob = async (params: {
     if (!Array.isArray(user.appliedJobs)) {
       user.appliedJobs = [];
     }
-    user.appliedJobs.push(jobId);
+    user.appliedJobs.push(openingsd);
     await user.save();
 
     // Add the user to the job's applicants list

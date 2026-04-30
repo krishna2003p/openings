@@ -126,18 +126,18 @@ export async function getEmployeeJobPosts(params: getEmployeeByIdParams) {
 }
 
 interface IDeleteEmployeeJobPostParams {
-  jobId: string | undefined;
+  openingsd: string | undefined;
   path: string;
 }
 
 export async function deleteEmployeeJobPost(
   params: IDeleteEmployeeJobPostParams
 ) {
-  const { jobId, path } = params;
+  const { openingsd, path } = params;
   try {
     await connectToDatabase();
     // Find the job post
-    const jobPost = await Job.findByIdAndDelete(jobId);
+    const jobPost = await Job.findByIdAndDelete(openingsd);
 
     if (!jobPost) {
       throw new Error('Job post not found');
@@ -150,7 +150,7 @@ export async function deleteEmployeeJobPost(
       throw new Error('User not found');
     }
 
-    user.jobPosts.pull(jobId); // Assuming 'jobPosts' is the name of the array field in the User model
+    user.jobPosts.pull(openingsd); // Assuming 'jobPosts' is the name of the array field in the User model
     await user.save();
 
     revalidatePath(path);
@@ -364,19 +364,19 @@ export async function getEmployeeStatisticsByClerkId({
   }
 }
 
-export const getJobApplicantsByJobId = async (jobId: string) => {
+export const getJobApplicantsByOpeningsd = async (openingsd: string) => {
   try {
     await connectToDatabase();
 
-    // Find the job by jobId and populate the applicants field
-    const job = await Job.findById(jobId).populate({
+    // Find the job by openingsd and populate the applicants field
+    const job = await Job.findById(openingsd).populate({
       path: 'applicants',
       model: User
       // select: 'name email picture'
     });
 
     if (!job) {
-      throw new Error(`Job with ID ${jobId} not found`);
+      throw new Error(`Job with ID ${openingsd} not found`);
     }
 
     return {

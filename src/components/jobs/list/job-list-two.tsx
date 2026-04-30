@@ -18,15 +18,15 @@ const categories: string[] = [
 const jobs = job_data.slice(0, 5);
 const JobListTwo = () => {
   const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
-  const [jobItems, setJobItems] = useState(jobs);
+  const [openingstems, setopeningstems] = useState(jobs);
   // handle job item
   const handleJob = (value: string) => {
     setActiveCategory(value);
     if (value === 'All Categories') {
-      setJobItems(jobs);
+      setopeningstems(jobs);
     } else {
       const remaining_jobs = job_data.filter((j) => j.category.includes(value));
-      setJobItems(remaining_jobs);
+      setopeningstems(remaining_jobs);
     }
   };
   return (
@@ -61,7 +61,7 @@ const JobListTwo = () => {
             className="grid-3column pt-55 lg-pt-20"
           >
             <div className="row">
-              {jobItems.map((item) => (
+              {openingstems.map((item) => (
                 <div
                   key={item.id}
                   className="col-lg-4 col-md-6 isotop-item overflow-hidden"

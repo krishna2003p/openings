@@ -20,7 +20,7 @@ const JobDetailsV2Area = ({ job }: IJobDetailsV2AreaProps) => {
   const { userId: loginInUserId } = useAuth();
   const handleJobApplication = async (
     userId: string | null | undefined,
-    jobId: string
+    openingsd: string
   ) => {
     Swal.fire({
       title: 'Are you sure you want to apply for this job?',
@@ -35,7 +35,7 @@ const JobDetailsV2Area = ({ job }: IJobDetailsV2AreaProps) => {
         //Todo: delete job post by Id
         const res = await applyForJob({
           clerkId: userId,
-          jobId
+          openingsd
         });
         if (res.status === 'ok') {
           Swal.fire({

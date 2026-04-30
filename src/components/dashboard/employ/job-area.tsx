@@ -1,5 +1,5 @@
 import React from 'react';
-import EmployJobItem from './job-item';
+import Employopeningstem from './job-item';
 import EmployShortSelect from './short-select';
 import { IJobData } from '@/database/job.model';
 import { getTimestamp } from '@/utils/utils';
@@ -77,9 +77,9 @@ const EmployJobArea = ({
                 </thead>
                 <tbody className="border-0">
                   {jobs?.map((job) => (
-                    <EmployJobItem
+                    <Employopeningstem
                       key={job._id}
-                      jobId={job._id}
+                      openingsd={job._id}
                       title={job.title}
                       info={job.overview}
                       date={getTimestamp(job?.createAt as Date)}
@@ -111,26 +111,26 @@ const EmployJobArea = ({
                   </tr>
                 </thead>
                 <tbody className="border-0">
-                  <EmployJobItem
+                  <Employopeningstem
                     title="Marketing Specialist"
                     info="Part-time . Uk"
                     date="13 Aug, 2023"
                     status="pending"
                   />
-                  <EmployJobItem
+                  <Employopeningstem
                     title="Brand & Producr Designer"
                     info="Fulltime . Spain"
                     date="05 Jun, 2023"
                     status="active"
                   />
-                  <EmployJobItem
+                  <Employopeningstem
                     title="Developer for IT company"
                     info="Fulltime . Germany"
                     date="14 Feb, 2023"
                     status="active"
                   />
 
-                  <EmployJobItem
+                  <Employopeningstem
                     title="Accounting Manager"
                     info="Fulltime . USA"
                     date="27 Sep, 2023"

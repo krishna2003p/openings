@@ -50,7 +50,7 @@ const EmployDashboardArea = ({
 }: IEmployDashboardProps) => {
   const pathname = usePathname();
 
-  const handleDeleteUser = async (jobId: string | undefined) => {
+  const handleDeleteUser = async (openingsd: string | undefined) => {
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -63,7 +63,7 @@ const EmployDashboardArea = ({
       if (result.isConfirmed) {
         //Todo: delete job post by Id
         const res = await deleteEmployeeJobPost({
-          jobId,
+          openingsd,
           path: pathname
         });
         if (res.status === 'ok') {

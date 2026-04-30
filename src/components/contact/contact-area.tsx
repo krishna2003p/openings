@@ -53,10 +53,10 @@ const ContactArea = () => {
                     <p>
                       live chat service <br />
                       <Link
-                        href="https://jobi-jobportal.vercel.app"
+                        href="https://openings-jobportal.vercel.app"
                         className="webaddress"
                       >
-                        https://jobi-jobportal.vercel.app
+                        https://openings-jobportal.vercel.app
                       </Link>
                     </p>
                   </div>

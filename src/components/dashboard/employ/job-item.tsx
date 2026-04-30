@@ -2,23 +2,23 @@ import React from 'react';
 import JobActionDropdown from './JobActionDropdown';
 import ParseHTML from '../../common/parseHTML';
 
-interface IEmployJobItemProps {
+interface IEmployopeningstemProps {
   title: string;
   info: string;
   date: string;
   createdBy: any;
   status: string;
-  jobId?: string | undefined;
+  openingsd?: string | undefined;
 }
 
-const EmployJobItem = ({
+const Employopeningstem = ({
   title,
   info,
   date,
   status,
-  jobId,
+  openingsd,
   createdBy
-}: IEmployJobItemProps) => {
+}: IEmployopeningstemProps) => {
   return (
     <tr className={status}>
       <td>
@@ -45,7 +45,7 @@ const EmployJobItem = ({
             <span></span>
           </button>
           {/* action dropdown start */}
-          <JobActionDropdown createdBy={createdBy._id} jobId={jobId} />
+          <JobActionDropdown createdBy={createdBy._id} openingsd={openingsd} />
           {/* action dropdown end */}
         </div>
       </td>
@@ -53,4 +53,4 @@ const EmployJobItem = ({
   );
 };
 
-export default EmployJobItem;
+export default Employopeningstem;

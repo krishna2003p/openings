@@ -11,14 +11,14 @@ import Swal from 'sweetalert2';
 import { deleteEmployeeJobPost } from '@/lib/actions/employee.action';
 
 interface IProps {
-  jobId: string | undefined;
+  openingsd: string | undefined;
   createdBy: string | undefined;
 }
 
-const JobActionDropdown = ({ jobId, createdBy }: IProps) => {
+const JobActionDropdown = ({ openingsd, createdBy }: IProps) => {
   const pathname = usePathname();
 
-  const handleDeleteUser = async (jobId: string | undefined) => {
+  const handleDeleteUser = async (openingsd: string | undefined) => {
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -31,7 +31,7 @@ const JobActionDropdown = ({ jobId, createdBy }: IProps) => {
       if (result.isConfirmed) {
         //Todo: delete job post by Id
         const res = await deleteEmployeeJobPost({
-          jobId,
+          openingsd,
           path: pathname
         });
         if (res.status === 'ok') {
@@ -47,7 +47,7 @@ const JobActionDropdown = ({ jobId, createdBy }: IProps) => {
   return (
     <ul className="dropdown-menu dropdown-menu-end">
       <li className="dropdown-item">
-        <Link href={`/candidate-profile/${jobId}`} className="dropdown-item">
+        <Link href={`/candidate-profile/${openingsd}`} className="dropdown-item">
           <Image src={view} alt="icon" className="lazy-img" /> View
         </Link>
       </li>
@@ -58,7 +58,7 @@ const JobActionDropdown = ({ jobId, createdBy }: IProps) => {
       </li>
       <li className="dropdown-item">
         <Link
-          href={`/dashboard/employ-dashboard/job/${jobId}/applicants`}
+          href={`/dashboard/employ-dashboard/job/${openingsd}/applicants`}
           className="dropdown-item"
         >
           <Image src={view} alt="icon" className="lazy-img" /> Show applicants
@@ -72,14 +72,14 @@ const JobActionDropdown = ({ jobId, createdBy }: IProps) => {
       <li className="dropdown-item">
         <Link
           className="dropdown-item"
-          href={`/dashboard/employ-dashboard/job/edit/${jobId}`}
+          href={`/dashboard/employ-dashboard/job/edit/${openingsd}`}
         >
           <Image src={edit} alt="icon" className="lazy-img" /> Edit
         </Link>
       </li>
       <li className="dropdown-item">
         <button
-          onClick={() => handleDeleteUser(jobId)}
+          onClick={() => handleDeleteUser(openingsd)}
           className="dropdown-item"
         >
           <Image src={delete_icon} alt="icon" className="lazy-img" /> Delete

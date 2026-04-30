@@ -19,7 +19,7 @@ const FooterTwo = () => {
                   <Image src={logo} alt="logo" priority />
                 </Link>
               </div>
-              <a href="#" className="email fw-500">jobisupport@new.com</a>
+              <a href="#" className="email fw-500">openingssupport@new.com</a>
               <Image src={shape} alt="shape" className="lazy-img mt-50 sm-mt-30 sm-mb-20" />
             </div>
             {/* widget one */}
@@ -47,7 +47,7 @@ const FooterTwo = () => {
               </ul>
             </div>
             <div className="col-lg-4 order-lg-2">
-              <p className="text-center mb-15">Copyright @{new Date().getFullYear()} jobi inc.</p>
+              <p className="text-center mb-15">Copyright @{new Date().getFullYear()} openings inc.</p>
             </div>
           </div>
         </div>

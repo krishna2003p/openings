@@ -133,7 +133,7 @@ const UpdateJobArea = ({ job }: IProps) => {
     try {
       // todo: update job data
       const res = await updateJobById({
-        jobId: job._id,
+        openingsd: job._id,
         updateData: {
           title: data.title,
           overview: data.overview,

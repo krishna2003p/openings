@@ -6,7 +6,7 @@ import { getJobById } from '@/lib/actions/job.action';
 import JobDetailsBreadcrumbTwo from '@/components/jobs/breadcrumb/job-details-breadcrumb-2';
 
 export const metadata: Metadata = {
-  title: 'Job Details - Jobi'
+  title: 'Job Details - Openings'
 };
 
 interface URLProps {

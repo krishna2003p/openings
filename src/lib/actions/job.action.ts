@@ -113,18 +113,18 @@ export const creatJobPost = async (jobDataParams: CreateJobParams) => {
 
 // Update a single job by MongoDB ID
 interface IUpdateJobParams {
-  jobId: string;
+  openingsd: string;
   updateData: IJobData;
   path: string;
 }
 
 export const updateJobById = async (params: IUpdateJobParams) => {
-  const { jobId, updateData, path } = params;
+  const { openingsd, updateData, path } = params;
   try {
     await connectToDatabase();
     // Update the job
     const updatedJob = await Job.findByIdAndUpdate(
-      jobId,
+      openingsd,
       { $set: updateData },
       { new: true } // To return the updated document
     );
@@ -233,10 +233,10 @@ export const getJobPosts = async (params: IJobDataParams) => {
 
 // get jobs by mongoId
 // Get a single job by MongoDB ID
-export const getJobById = async (jobId: string) => {
+export const getJobById = async (openingsd: string) => {
   try {
     await connectToDatabase();
-    const job = await Job.findById(jobId)
+    const job = await Job.findById(openingsd)
       .populate('createdBy', 'name picture website')
       .exec();
 

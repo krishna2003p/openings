@@ -1,10 +1,10 @@
 ## 🌐 Demo Live
 
-Here is a working live demo: https://jobi-jobportal.vercel.app/
+Here is a working live demo: https://openings-drab.vercel.app/
 
 ## 📝 Description
 
-Jobi is an advanced job portal website designed to streamline the hiring process for employers and provide a comprehensive job search experience for candidates. Employers can create job posts, shortlist favorite candidates, and manage their hiring process efficiently through a feature-rich admin dashboard. Candidates can apply for jobs, track their application status, and more. Jobi includes a plethora of features aimed at enhancing both user and admin experiences.
+Openings is an advanced job portal website designed to streamline the hiring process for employers and provide a comprehensive job search experience for candidates. Employers can create job posts, shortlist favorite candidates, and manage their hiring process efficiently through a feature-rich admin dashboard. Candidates can apply for jobs, track their application status, and more. openings includes a plethora of features aimed at enhancing both user and admin experiences.
 
 ## Features
 
@@ -48,7 +48,7 @@ We need to install or make sure that these tools are pre-installed on your machi
 1. Clone the Repository
 
 ```bash
-git clone https://github.com/rakibtweets/jobi-nextjs.git
+git clone https://github.com/krishna2003p/openings.git
 
 ```
 
@@ -91,10 +91,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/rakibtweets/jobi-nextjs.git
+$ git clone https://github.com/krishna2003p/openings.git
 
 # Go into the repository
-$ cd jobi
+$ cd openings
 
 # Install dependencies
 $ npm install
@@ -103,14 +103,12 @@ $ npm install
 $ npm start
 ```
 
-> **Note**
-> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
 ## 📋 License
 
 MIT License
 
-Copyright (c) [2024] [Jobi]
+Copyright (c) [2024] [openings]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

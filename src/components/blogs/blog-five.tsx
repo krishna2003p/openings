@@ -12,7 +12,7 @@ const BlogFive = () => {
           <div className="row">
             <div className="col-xl-7">
               <div className="title-one mb-20 lg-mb-10 wow fadeInUp" data-wow-delay="0.3s">
-                <h2 className="main-font">Jobi Guides</h2>
+                <h2 className="main-font">Openings Guides</h2>
               </div>
             </div>
           </div>
