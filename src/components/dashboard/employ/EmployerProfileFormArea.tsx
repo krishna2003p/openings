@@ -162,7 +162,6 @@ const EmployerProfileFormArea = ({
                     type="email"
                     defaultValue={mongoUser?.email || ''}
                     readOnly
-                    disabled
                     {...register('email')}
                     name="email"
                     placeholder="companyinc@gmail.com"

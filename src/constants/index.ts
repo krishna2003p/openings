@@ -126,6 +126,12 @@ export const experienceOptions = [
   { value: 'Expert', label: 'Expert' }
 ];
 
+export const categoryOptions = [
+  { value: 'Data-Science', label: 'Data-Science' },
+  { value: 'Web-Development', label: 'Web Development' },
+  { value: 'AI-ML', label: 'AI/ML' }
+];
+
 export const englishLevelOptions = [
   { value: 'Basic', label: 'Basic' },
   { value: 'Conversational', label: 'Conversational' },
