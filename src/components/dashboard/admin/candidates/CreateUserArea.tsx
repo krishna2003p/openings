@@ -288,7 +288,7 @@ const CreateUserArea = ({
                 placeholder="Your email address"
                 {...register('email')}
                 name="email"
-                disabled={isCandidate}
+                // disabled={isCandidate}
               />
               {errors?.email && (
                 <ErrorMsg msg={errors?.email?.message as string} />
