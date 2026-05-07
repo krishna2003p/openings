@@ -64,6 +64,62 @@ export const qualificationOptions = [
   { value: `Secondary School`, label: `Secondary School` }
 ];
 
+export const postOptions = [
+  { value: 'frontend-developer', label: 'Frontend Developer' },
+  { value: 'backend-developer', label: 'Backend Developer' },
+  { value: 'fullstack-developer', label: 'Full Stack Developer' },
+  { value: 'mobile-app-developer', label: 'Mobile App Developer' },
+  { value: 'ui-ux-designer', label: 'UI/UX Designer' },
+  { value: 'graphic-designer', label: 'Graphic Designer' },
+  { value: 'devops-engineer', label: 'DevOps Engineer' },
+  { value: 'qa-engineer', label: 'QA Engineer' },
+  { value: 'software-engineer', label: 'Software Engineer' },
+  { value: 'project-manager', label: 'Project Manager' },
+  { value: 'product-manager', label: 'Product Manager' },
+  { value: 'data-analyst', label: 'Data Analyst' },
+  { value: 'data-scientist', label: 'Data Scientist' },
+  { value: 'machine-learning-engineer', label: 'Machine Learning Engineer' },
+  { value: 'cyber-security-analyst', label: 'Cyber Security Analyst' },
+  { value: 'cloud-engineer', label: 'Cloud Engineer' },
+  { value: 'business-analyst', label: 'Business Analyst' },
+  { value: 'hr-manager', label: 'HR Manager' },
+  { value: 'digital-marketing-executive', label: 'Digital Marketing Executive' },
+  { value: 'content-writer', label: 'Content Writer' }
+];
+
+export const skillsOptions = [
+  { value: 'javascript', label: 'JavaScript' },
+  { value: 'typescript', label: 'TypeScript' },
+  { value: 'react', label: 'React' },
+  { value: 'nextjs', label: 'Next.js' },
+  { value: 'nodejs', label: 'Node.js' },
+  { value: 'expressjs', label: 'Express.js' },
+  { value: 'mongodb', label: 'MongoDB' },
+  { value: 'mysql', label: 'MySQL' },
+  { value: 'postgresql', label: 'PostgreSQL' },
+  { value: 'firebase', label: 'Firebase' },
+  { value: 'tailwind-css', label: 'Tailwind CSS' },
+  { value: 'html', label: 'HTML' },
+  { value: 'css', label: 'CSS' },
+  { value: 'bootstrap', label: 'Bootstrap' },
+  { value: 'python', label: 'Python' },
+  { value: 'java', label: 'Java' },
+  { value: 'c++', label: 'C++' },
+  { value: 'php', label: 'PHP' },
+  { value: 'figma', label: 'Figma' },
+  { value: 'adobe-xd', label: 'Adobe XD' },
+  { value: 'docker', label: 'Docker' },
+  { value: 'kubernetes', label: 'Kubernetes' },
+  { value: 'aws', label: 'AWS' },
+  { value: 'git', label: 'Git' },
+  { value: 'github', label: 'GitHub' },
+  { value: 'redux', label: 'Redux' },
+  { value: 'graphql', label: 'GraphQL' },
+  { value: 'rest-api', label: 'REST API' },
+  { value: 'seo', label: 'SEO' },
+  { value: 'content-writing', label: 'Content Writing' }
+];
+
 export const experienceOptions = [
   { value: 'Intermediate', label: 'Intermediate' },
   { value: 'No-Experience', label: 'No-Experience' },

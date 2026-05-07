@@ -16,7 +16,9 @@ import {
   englishLevelOptions,
   experienceOptions,
   genderOptions,
-  qualificationOptions
+  qualificationOptions,
+  postOptions,
+  skillsOptions
 } from '@/constants';
 import { createCandidateProfileByUpdating } from '@/lib/actions/candidate.action';
 import { usePathname, useRouter } from 'next/navigation';
@@ -390,8 +392,9 @@ const CreateUserArea = ({
                 render={({ field }) => (
                   <Select
                     {...field}
+                    options={postOptions || []}
                     isClearable
-                    options={categoryOptions || []}
+                    // options={categoryOptions || []}
                     className="basic-multi-select"
                     classNamePrefix="select"
                     onChange={(selectedOption) => {
@@ -421,7 +424,7 @@ const CreateUserArea = ({
                     {...field}
                     //@ts-ignore
                     options={
-                      selectedPost ? selectedPostSkills : subCategories || []
+                      selectedPost ? selectedPostSkills : skillsOptions || []
                     }
                     className="basic-multi-select"
                     classNamePrefix="select"
